@@ -16,9 +16,10 @@ module EtcdCookbook
 
     # https://coreos.com/etcd/docs/latest/configuration.html
     # Member flags
-    property :node_name, String, name_property: true, desired_state: false
-    property :data_dir, String, default: lazy { "#{node_name}.etcd" }, desired_state: false
+    property :service_name, String, name_property: true, desired_state: false
+    property :data_dir, String, default: lazy { "#{service_name}.etcd" }, desired_state: false
     property :wal_dir, String, desired_state: false
+    property :node_name, String, default: lazy { "#{service_name}" }, desired_state: false
     property :snapshot_count, String, desired_state: false
     property :heartbeat_interval, String, desired_state: false
     property :election_timeout, String, desired_state: false

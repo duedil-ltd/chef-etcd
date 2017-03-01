@@ -52,8 +52,9 @@ module EtcdCookbook
         opts
       end
 
+
       def etcd_name
-        "etcd-#{node_name}"
+        "etcd-#{service_name}"
       end
 
       def etcdctl_bin
