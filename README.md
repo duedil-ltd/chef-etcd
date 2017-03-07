@@ -261,6 +261,7 @@ The `etcd_service` resource property list corresponds to the options found in
 - `discovery_srv`
 - `discovery_fallback`
 - `discovery_proxy`
+- `strict_reconfig_check`
 
 ##### Proxy Flags
 
