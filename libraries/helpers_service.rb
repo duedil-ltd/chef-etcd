@@ -49,6 +49,7 @@ module EtcdCookbook
         opts << "-snapshot-count=#{snapshot_count}" unless snapshot_count.nil?
         opts << "-trusted-ca-file=#{trusted_ca_file}" unless trusted_ca_file.nil?
         opts << "-wal-dir=#{wal_dir}" unless wal_dir.nil?
+        opts << '-strict-reconfig-check=true' if strict_reconfig_check == true
         opts
       end
 
